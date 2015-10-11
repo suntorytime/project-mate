@@ -1,23 +1,63 @@
 <div class="container">
 
-<a href="/mates/<%= @mate.id %>/edit">Edit this mate</a>
-
+<a href="/mates/<%= @mate.id %>/edit">Edit</a>
+<ul>
+<li>
   First Name: <%= @mate.first_name %>
+</li>
+<li>
   Last Name: <%= @mate.last_name %>
+</li>
+<li>
   Email: <%= @mate.email %>
+</li>
+<li>
   Birthday: <%= @mate.birthday %>
+</li>
+<li>
   City: <%= @mate.city %>
+</li>
+<li>
   Random Notes: <%= @mate.random_note %>
+</li>
+<li>
   Likes: <%= @mate.like %>
+</li>
+<li>
   Dislikes: <%= @mate.dislike %>
+</li>
+<li>
   Significant Others: <%= @mate.significant_other %>
+</li>
+<li>
   Job: <%= @mate.job %>
+</li>
+<li>
   Drunk Convos: <%= @mate.drunk_convo %>
+</li>
+<li>
   Favorite Drinks: <%= @mate.favorite_drink %>
+</li>
+<li>
   Quirks: <%= @mate.quirk %>
+</li>
+<li>
   Inspirations: <%= @mate.inspiration %>
+</li>
+<li>
   Accomplishments: <%= @mate.accomplishment %>
+</li>
+<li>
   Travel Destinations: <%= @mate.travel_destination %>
+</li>
+<li>
   Ideal Day: <%= @mate.ideal_day %>
+</li>
+</ul>
+
+<form action="/mates/<%= @mate.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>
 
 </div>

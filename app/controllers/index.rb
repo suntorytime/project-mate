@@ -47,12 +47,12 @@ end
 
 ##### CREATE A MATE #####
 
-get '/new' do
+get '/new' do ## fix this to reflect restful routes /products/new
 
   erb :new_mate
 end
 
-post '/new' do
+post '/new' do ## fix this to reflect restful routes /products
 
   @me = User.find_by(email: session[:email])
   new_mate = Mate.create(params[:new])
@@ -88,4 +88,13 @@ put '/mates/:id/' do
   @mate = Mate.find(params[:id])
   @mate.update(params[:mate])
   erb :profile
+end
+
+##### DELETE MATE #####
+
+delete '/mates/:id' do
+
+  @mate = Mate.find(params[:id])
+  @mate.destroy
+  redirect '/mates'
 end
