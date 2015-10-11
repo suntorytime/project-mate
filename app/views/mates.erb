@@ -1,0 +1,13 @@
+<div class="container">
+
+  <h2>Your Mates</h2>
+  <a href="/new">Create a Mate</a>
+  <ul>
+  <% @user_mates.each do |mate| %>
+    <li>
+      <a href="/mates/<%= mate.id %>"><%= mate.first_name %> <%= mate.last_name %></a>
+    </li>
+  <% end %>
+  </ul>
+
+</div>
