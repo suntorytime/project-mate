@@ -12,7 +12,7 @@ post '/login' do
 
   if user && user.password == params[:user][:password] #
     session[:email] = user.email # stores the info in cookies
-    redirect '/'
+    redirect '/mates'
   else
     # @login_failed = true
     redirect '/'
@@ -39,7 +39,7 @@ end
 
 ##### LOGOUT #####
 
-post '/logout' do
+get '/logout' do
 
   session[:email] = nil
   redirect '/'
@@ -73,10 +73,21 @@ end
 
 get '/mates/:id' do
 
-  # p params
-  # @item = Item.find(params[:id])
-  # owner_id = @item.user_id
-  # @user = User.find(owner_id)
-  # @owner = User.find(owner_id)
+  @mate = Mate.find(params[:id])
+  erb :profile
+end
+
+get '/mates/:id/edit' do
+
+  @mate = Mate.find(params[:id])
+  erb :edit
+end
+
+put '/update' do
+
+
+  @mate = Mate.find(params[:mate][:id])
+  p @mate
+  # @mate.update(params[:mate])
   erb :profile
 end

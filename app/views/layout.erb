@@ -18,6 +18,10 @@
   <title>Mate</title>
 </head>
 <h1>Mate</h1>
+<% if current_user %>
+  <a href="/mates">My Mates</a>
+  <a href="/logout">Logout</a>
+  <% end %>
 <body>
 <div id="content">
   <%= yield %>

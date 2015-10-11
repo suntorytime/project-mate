@@ -1,0 +1,28 @@
+<div class="container">
+
+Hello world of mate profile editor
+
+ <form method="post" action="/update" >
+    <input type="hidden" name="_method" value="put" />
+    <input type="hidden" name"mate[id]" value="<%= @mate.id %>">
+    First name: <input type="text" name="mate[first_name]" value="<%= @mate.first_name %>">
+    Last name: <input type="text" name="mate[last_name]" value="<%= @mate.last_name %>">
+    Email: <input type="text" name="mate[email]" value="<%= @mate.email %>">
+    Birthday: <input type="date" name="mate[birthday]" value="<%= @mate.birthday %>">
+    City: <input type="text" name="mate[city]" value="<%= @mate.city %>">
+    Random Notes: <input type="text" name="mate[random_note]" value="<%= @mate.random_note %>">
+    Likes: <input type="text" name="mate[like]" value="<%= @mate.like %>">
+    Dislikes: <input type="text" name="mate[dislike]" value="<%= @mate.dislike %>">
+    Significant Others: <input type="text" name="mate[significant_other]" value="<%= @mate.significant_other %>">
+    Job: <input type="text" name="mate[job]" value="<%= @mate.job %>">
+    Drunk Convos: <input type="text" name="mate[drunk_convo]" value="<%= @mate.drunk_convo %>">
+    Favorite Drinks: <input type="text" name="mate[favorite_drink]" value="<%= @mate.favorite_drink %>">
+    Quirks: <input type="text" name="mate[quirk]" value="<%= @mate.quirk %>">
+    Inspirations: <input type="text" name="mate[inspiration]" value="<%= @mate.inspiration %>">
+    Accomplishments: <input type="text" name="mate[accomplishment]" value="<%= @mate.accomplishment %>">
+    Travel Destinations: <input type="text" name="mate[birthday]" value="<%= @mate.travel_destination %>">
+    Ideal Day: <input type="text" name="mate[birthday]" value="<%= @mate.ideal_day %>">
+    <input type="submit" value="Edit">
+  </form>
+
+</div>
