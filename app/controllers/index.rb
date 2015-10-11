@@ -83,11 +83,9 @@ get '/mates/:id/edit' do
   erb :edit
 end
 
-put '/update' do
+put '/mates/:id/' do
 
-
-  @mate = Mate.find(params[:mate][:id])
-  p @mate
-  # @mate.update(params[:mate])
+  @mate = Mate.find(params[:id])
+  @mate.update(params[:mate])
   erb :profile
 end

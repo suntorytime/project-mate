@@ -2,9 +2,8 @@
 
 Hello world of mate profile editor
 
- <form method="post" action="/update" >
+ <form method="post" action="/mates/<%= @mate.id %>/" >
     <input type="hidden" name="_method" value="put" />
-    <input type="hidden" name"mate[id]" value="<%= @mate.id %>">
     First name: <input type="text" name="mate[first_name]" value="<%= @mate.first_name %>">
     Last name: <input type="text" name="mate[last_name]" value="<%= @mate.last_name %>">
     Email: <input type="text" name="mate[email]" value="<%= @mate.email %>">
