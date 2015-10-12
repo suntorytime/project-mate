@@ -1,7 +1,10 @@
-<div class="container">
+<div class="main">
+<div class="content">
 
-  <h2>Your Mates</h2>
-  <a href="/new">Create a Mate</a>
+  <h2 class="content-subhead">Your Mates</h2>
+  <form action="/new" method="get" >
+    <input type="submit" value="Create a mate" class="pure-button pure-input-1-2 pure-button-primary">
+  </form>
   <ul>
   <% @user_mates.each do |mate| %>
     <li>
@@ -10,4 +13,5 @@
   <% end %>
   </ul>
 
+</div>
 </div>

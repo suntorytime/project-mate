@@ -10,21 +10,43 @@
   <!--
     application.css is where you put your styles
   -->
-  <link rel="stylesheet" href="/css/application.css">
+  <!-- <link rel="stylesheet" href="/css/application.css"> -->
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <link rel="stylesheet" href="/css/side-menu.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
   <title>Mate</title>
 </head>
-<h1>Mate</h1>
+
 <% if current_user %>
-  <a href="/mates">My Mates</a>
-  <a href="/logout">Logout</a>
+<div id="layout">
+<a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+<div id="menu">
+  <a class="pure-menu-heading" href="/mates">Mate</a>
+  <ul class="pure-menu-list">
+    <li class="pure-menu-item">
+      <a href="/mates" class="pure-menu-link">My Mates</a>
+    </li>
+    <li class="pure-menu-item">
+      <a href="/logout" class="pure-menu-link">Logout</a>
+    </li>
+  </ul>
   <% end %>
+</div>
+
 <body>
 <div id="content">
+  <div class="header">
+            <h1>Mate</h1>
+            <h2>Discover and remember your friends</h2>
+        </div>
   <%= yield %>
+</div>
 </div>
 </body>
 </html>

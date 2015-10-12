@@ -1,12 +1,21 @@
-<div class="container">
+<div class="main">
+<div class="content">
 
-<h2>Sign in</h2>
-<form method="post" action="/login">
+<form method="post" action="/login" class="pure-form pure-form-stacked" style>
+  <fieldset>
+      <legend>
+        Sign In
+      </legend>
   <input type="text" name="user[email]" placeholder="email">
   <input type="password" name="user[password]" placeholder="password">
-  <input type="submit" value="Login">
+  <label for="remember">
+      <input id="remember" type="checkbox"> Remember me
+  </label>
+  <input type="submit" class="pure-button pure-button-primary" value="Login">
+</fieldset>
 </form>
 
 or <h3><a href="/register">Register</a></h3>
 
+</div>
 </div>
