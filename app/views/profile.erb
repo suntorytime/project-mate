@@ -3,61 +3,132 @@
 <div class="content">
 
   <form action="/mates/<%= @mate.id %>/edit" method="get">
-    <input type="submit" value="Edit" class="pure-button pure-input-1-2 pure-button-primary">
+    <input type="submit" value="Edit" class="pure-button pure-input-1-2 pure-button-primary" style="margin-top: 1em">
   </form>
-  <ul>
-  <li>
-    First Name: <%= @mate.first_name %>
-  </li>
-  <li>
-    Last Name: <%= @mate.last_name %>
-  </li>
-  <li>
-    Email: <%= @mate.email %>
-  </li>
-  <li>
-    Birthday: <%= @mate.birthday %>
-  </li>
-  <li>
-    City: <%= @mate.city %>
-  </li>
-  <li>
-    Random Notes: <%= @mate.random_note %>
-  </li>
-  <li>
-    Likes: <%= @mate.like %>
-  </li>
-  <li>
-    Dislikes: <%= @mate.dislike %>
-  </li>
-  <li>
-    Significant Others: <%= @mate.significant_other %>
-  </li>
-  <li>
-    Job: <%= @mate.job %>
-  </li>
-  <li>
-    Drunk Convos: <%= @mate.drunk_convo %>
-  </li>
-  <li>
-    Favorite Drinks: <%= @mate.favorite_drink %>
-  </li>
-  <li>
-    Quirks: <%= @mate.quirk %>
-  </li>
-  <li>
-    Inspirations: <%= @mate.inspiration %>
-  </li>
-  <li>
-    Accomplishments: <%= @mate.accomplishment %>
-  </li>
-  <li>
-    Travel Destinations: <%= @mate.travel_destination %>
-  </li>
-  <li>
-    Ideal Day: <%= @mate.ideal_day %>
-  </li>
-  </ul>
+
+  <div class="pure-g">
+
+  <div class="pure-u-2-5">
+    <div class="l-box"><h3>First Name</h3></div>
+  </div>
+  <div class="pure-u-3-5">
+    <div class="l-box"><p><%= @mate.first_name %></p></div>
+  </div>
+
+  <div class="pure-u-2-5">
+    <div class="l-box"><h3>Last Name</h3></div>
+  </div>
+  <div class="pure-u-3-5">
+    <div class="l-box"><p><%= @mate.last_name %></p></div>
+  </div>
+
+  <div class="pure-u-2-5">
+    <div class="l-box"><h3>Email</h3></div>
+  </div>
+  <div class="pure-u-3-5">
+    <div class="l-box"><p><%= @mate.email %></p></div>
+  </div>
+
+  <div class="pure-u-2-5">
+    <div class="l-box"><h3>City</h3></div>
+  </div>
+  <div class="pure-u-3-5">
+    <div class="l-box"><p><%= @mate.city %></p></div>
+  </div>
+
+  <div class="pure-u-2-5">
+    <div class="l-box"><h3>Birthday</h3></div>
+  </div>
+  <div class="pure-u-3-5">
+    <div class="l-box"><p><%= @mate.birthday %></p></div>
+  </div>
+
+  <div class="pure-u-2-5">
+    <div class="l-box"><h3>Likes</h3></div>
+  </div>
+  <div class="pure-u-3-5">
+    <div class="l-box"><p><%= @mate.like %></p></div>
+  </div>
+
+  <div class="pure-u-2-5">
+    <div class="l-box"><h3>Dislikes</h3></div>
+  </div>
+  <div class="pure-u-3-5">
+    <div class="l-box"><p><%= @mate.dislike %></p></div>
+  </div>
+
+  <div class="pure-u-2-5">
+    <div class="l-box"><h3>Significant Others</h3></div>
+  </div>
+  <div class="pure-u-3-5">
+    <div class="l-box"><p><%= @mate.significant_other %></p></div>
+  </div>
+
+  <div class="pure-u-2-5">
+    <div class="l-box"><h3>Job</h3></div>
+  </div>
+  <div class="pure-u-3-5">
+    <div class="l-box"><p><%= @mate.job %></p></div>
+  </div>
+
+  <div class="pure-u-2-5">
+    <div class="l-box"><h3>Drunk Convos</h3></div>
+  </div>
+  <div class="pure-u-3-5">
+    <div class="l-box"><p><%= @mate.drunk_convo %></p></div>
+  </div>
+
+  <div class="pure-u-2-5">
+    <div class="l-box"><h3>Favorite Drinks</h3></div>
+  </div>
+  <div class="pure-u-3-5">
+    <div class="l-box"><p><%= @mate.favorite_drink %></p></div>
+  </div>
+
+  <div class="pure-u-2-5">
+    <div class="l-box"><h3>Quirks</h3></div>
+  </div>
+  <div class="pure-u-3-5">
+    <div class="l-box"><p><%= @mate.quirk %></p></div>
+  </div>
+
+  <div class="pure-u-2-5">
+    <div class="l-box"><h3>Inspirations</h3></div>
+  </div>
+  <div class="pure-u-3-5">
+    <div class="l-box"><p><%= @mate.inspiration %></p></div>
+  </div>
+
+  <div class="pure-u-2-5">
+    <div class="l-box"><h3>Accomplishments</h3></div>
+  </div>
+  <div class="pure-u-3-5">
+    <div class="l-box"><p><%= @mate.accomplishment %></p></div>
+  </div>
+
+  <div class="pure-u-2-5">
+    <div class="l-box"><h3>Travel Destinations</h3></div>
+  </div>
+  <div class="pure-u-3-5">
+    <div class="l-box"><p><%= @mate.travel_destination %></p></div>
+  </div>
+
+  <div class="pure-u-2-5">
+    <div class="l-box"><h3>Ideal Day</h3></div>
+  </div>
+  <div class="pure-u-3-5">
+    <div class="l-box"><p><%= @mate.ideal_day  %></p></div>
+  </div>
+
+  <div class="pure-u-2-5">
+    <div class="l-box"><h3>Random Notes</h3></div>
+  </div>
+  <div class="pure-u-3-5">
+    <div class="l-box"><p><%= @mate.random_note  %></p></div>
+  </div>
+
+
+  </div>
 
   <form action="/mates/<%= @mate.id %>" method="post">
     <input type="hidden" name="_method" value="delete">
