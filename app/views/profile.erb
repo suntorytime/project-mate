@@ -2,6 +2,10 @@
 <div class="main">
 <div class="content">
 
+  <form method="get" action="/mates" class="pure-form">
+    <input type="submit" value="Cancel" style="margin-top: 1em" class="pure-button pure-button-primary">
+  </form>
+
   <form action="/mates/<%= @mate.id %>/edit" method="get">
     <input type="submit" value="Edit" class="pure-button pure-input-1-2 pure-button-primary" style="margin-top: 1em">
   </form>

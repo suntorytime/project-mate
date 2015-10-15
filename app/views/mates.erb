@@ -1,10 +1,10 @@
 <div class="main">
 <div class="content">
 
-  <h2 class="content-subhead">Your Mates</h2>
-  <form action="/new" method="get" >
+  <form action="/new" method="get" style="margin-top: 1em">
     <input type="submit" value="Create a mate" class="pure-button pure-input-1-2 pure-button-primary">
   </form>
+  <h2 class="content-subhead">Your Mates</h2>
   <ul>
   <% @user_mates.each do |mate| %>
     <li>
@@ -13,5 +13,21 @@
   <% end %>
   </ul>
 
+  <h2 class="content-subhead">You have Mates at these cities</h2>
+  <ul>
+    <% @cities.each do |my_city| %>
+    <li>
+      <h3><%= my_city %></h3>
+      <ul>
+        <% city_mates = @user_mates.where(["city = ?", my_city]) %>
+        <% city_mates.each do |city_mate| %>
+        <li>
+          <a href="/mates/<%= city_mate.id %>"><%= city_mate.first_name %> <%= city_mate.last_name %></a>
+        </li>
+        <% end %>
+      </ul>
+    </li>
+    <% end %>
+  </ul>
 </div>
 </div>

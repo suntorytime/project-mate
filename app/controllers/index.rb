@@ -1,7 +1,7 @@
 ##### INDEX #####
 get '/' do
 
-  erb :index
+  erb :index2 # replaced index 1
 end
 
 ##### LOGIN ####
@@ -66,6 +66,7 @@ get '/mates' do
 
   @user = User.find_by(email: session[:email])
   @user_mates = @user.mates
+  @cities = @user_mates.select("DISTINCT city").map(&:city)
   erb :mates
 end
 

@@ -69,3 +69,7 @@ code {
 .cancel {
     margin-top: 1em;
 }
+
+#remember {
+    color: white;
+}
