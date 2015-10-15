@@ -1,3 +1,6 @@
+##### GOOGLE AUTH #####
+
+
 ##### INDEX #####
 get '/' do
 
@@ -12,7 +15,7 @@ post '/login' do
 
   if user && user.password == params[:user][:password] #
     session[:email] = user.email # stores the info in cookies
-    redirect '/mates'
+    redirect "/mates"
   else
     # @login_failed = true
     redirect '/'
@@ -26,15 +29,29 @@ get '/register' do
 end
 
 post '/register' do
-
-  user = User.new(params[:user])
-  if user.save
-    session[:email] = user.email
-    redirect "/mates"
+  p params
+  if request.xhr?
+    @user = User.new(params)
+    @user.save
+    session[:email] = @user.email
+    p session[:email]
+    p "hello tony" * 10
+    binding.pry
+    redirect '/mates'
   else
-    # session[:error] = user.errors.messages
+    p "In the else statement"
     redirect '/'
   end
+
+  # user = User.new(params[:user])
+  # if user.save
+  #   session[:email] = user.email
+  #   redirect "/mates"
+  # else
+  #   # session[:error] = user.errors.messages
+  #   redirect '/'
+  # end
+  redirect '/mates'
 end
 
 ##### LOGOUT #####

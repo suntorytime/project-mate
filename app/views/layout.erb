@@ -13,8 +13,8 @@
   <!-- <link rel="stylesheet" href="/css/application.css"> -->
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
   <link rel="stylesheet" href="/css/side-menu.css">
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
   <title>Mate</title>
@@ -33,7 +33,7 @@
       <a href="/mates" class="pure-menu-link">My Mates</a>
     </li>
     <li class="pure-menu-item">
-      <a href="/logout" class="pure-menu-link">Logout</a>
+      <a href="/logout" onclick="signOut();" class="pure-menu-link">Logout</a>
     </li>
   </ul>
   <% end %>
