@@ -136,7 +136,7 @@ a.pure-button-primary {
     /*background-image: url("http://3.bp.blogspot.com/-DLjfIyxrRmE/U2pptaTGsRI/AAAAAAAAHv8/qrXtmZM4lrs/s1600/Soiree_p068-069.jpg");*/
     background-image: url(soiree.jpg);
     background-repeat: no-repeat;
-    background-size: cover; /* allows for image to be stretched across the width of page
+    background-size: cover;
     z-index: 1;
     overflow: hidden;
     /* The following styles are required for the "scroll-over" effect */
