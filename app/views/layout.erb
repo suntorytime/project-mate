@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="/css/normalize.css">
+
+    <!-- application.css is where you put your styles -->
+
+  <!-- <link rel="stylesheet" href="/css/application.css"> -->
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <link rel="stylesheet" href="/css/custom.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/custom.js"></script>
+  <script src="/js/gmail.js"></script>
+  <script src="/js/google-signin.js"></script>
+  <script src="/js/application.js"></script>
+
+  <title>Mate</title>
+</head>
+
+<% if current_user %>
+<div id="layout">
+<a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+<div id="menu">
+  <a class="pure-menu-heading" href="/mates">Mate</a>
+  <ul class="pure-menu-list">
+    <li class="pure-menu-item">
+      <a href="/mates" class="pure-menu-link">My Mates</a>
+    </li>
+    <li class="pure-menu-item">
+      <a href="/logout" class="pure-menu-link">Logout</a>
+    </li>
+  </ul>
+  <script src="/js/ui.js"></script> <!-- The sidebar JS needs to be placed at the end of this line specifically  -->
+  <% end %>
+</div>
+
+<body>
+<div id="content">
+  <div class="header">
+            <h1>Mate</h1>
+            <h2>Discover and remember your friends</h2>
+        </div>
+  <%= yield %>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<div class="container">
+<div class="content">
+
+<h2 class="content-subhead">Mate Editor</h2>
+
+<form action="/mates/<%= @mate.id %>" method="get">
+    <input type="submit" value="Cancel" class="pure-button pure-input-1-2 pure-button-primary">
+</form>
+
+<form method="post" action="/mates/<%= @mate.id %>/" class="pure-form pure-form-aligned">
+    <fieldset>
+    <input type="hidden" name="_method" value="put" />
+    <div class="pure-control-group">
+        <label for="first_name"><h3>First Name</h3></label>
+        <input type="text" name="mate[first_name]" value="<%= @mate.first_name %>">
+    </div>
+    <div class="pure-control-group">
+    <label for="last_name"><h3>Last Name</h3></label>
+    <input type="text" name="mate[last_name]" value="<%= @mate.last_name %>">
+    </div>
+
+    <div class="pure-control-group">
+    <label for="email"><h3>Email</h3></label>
+    <input type="text" name="mate[email]" value="<%= @mate.email %>">
+    </div>
+
+    <div class="pure-control-group">
+    <label for="birthday"><h3>Birthday</h3></label>
+    <input type="date" name="mate[birthday]" value="<%= @mate.birthday %>">
+    </div>
+
+    <div class="pure-control-group">
+    <label for="city"><h3>City</h3></label>
+    <input type="text" name="mate[city]" value="<%= @mate.city %>">
+    </div>
+
+    <div class="pure-control-group">
+    <label for="like"><h3>Likes</h3></label>
+    <input type="text" name="mate[like]" value="<%= @mate.like %>">
+    </div>
+
+    <div class="pure-control-group">
+    <label for="dislike"><h3>Dislikes</h3></label>
+    <input type="text" name="mate[dislike]" value="<%= @mate.dislike %>">
+    </div>
+
+    <div class="pure-control-group">
+    <label for="significant_other"><h3>Significant others</h3></label>
+    <input type="text" name="mate[significant_other]" value="<%= @mate.significant_other %>">
+    </div>
+
+    <div class="pure-control-group">
+    <label for="job"><h3>Job</h3></label>
+    <input type="text" name="mate[job]" value="<%= @mate.job %>">
+    </div>
+
+    <div class="pure-control-group">
+    <label for="drunk_convo"><h3>Drunk Convos</h3></label>
+    <input name="mate[drunk_convo]" value="<%= @mate.drunk_convo %>">
+    </div>
+
+    <div class="pure-control-group">
+    <label for="favorite_drink"><h3>Favorite drinks</h3></label>
+    <input type="text" name="mate[favorite_drink]" value="<%= @mate.favorite_drink %>"></div>
+
+    <div class="pure-control-group">
+    <label for="Quirk"><h3>Quirks</h3></label>
+    <input type="text" name="mate[quirk]" value="<%= @mate.quirk %>">
+    </div>
+
+    <div class="pure-control-group">
+    <label for="inspiration"><h3>Inspirations</h3></label>
+    <input type="text" name="mate[inspiration]" value="<%= @mate.inspiration %>">
+    </div>
+
+    <div class="pure-control-group">
+    <label for="accomplishment"><h3>Accomplishments</h3></label>
+    <input type="text" name="mate[accomplishment]" value="<%= @mate.accomplishment %>">
+    </div>
+
+    <div class="pure-control-group">
+    <label for="last_name"><h3>Travel destinations</h3></label>
+    <input type="text" name="mate[travel_destination]" value="<%= @mate.travel_destination %>">
+    </div>
+
+    <div class="pure-control-group">
+    <label for="last_name"><h3>Ideal day</h3></label>
+    <input type="text" name="mate[ideal_day]" value="<%= @mate.ideal_day %>">
+    </div>
+
+    <div class="pure-control-group">
+    <label for="random_note"><h3>Random Notes</h3></label>
+    <input type="text" name="mate[random_note]" value="<%= @mate.random_note %>">
+    </div>
+
+    <input type="submit" value="Submit Changes" class="pure-button pure-input-1-2 pure-button-primary">
+    </fieldset>
+  </form>
+
+</div>
+</div>
