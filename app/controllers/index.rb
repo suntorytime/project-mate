@@ -99,3 +99,17 @@ delete '/mates/:id' do
   @mate.destroy
   redirect '/mates'
 end
+
+##### GOOGLE MAIL #####
+get '/googlemail' do
+  # holy shit this is working
+  redirect 'https://accounts.google.com/o/oauth2/auth?scope=https://www.googleapis.com/auth/gmail.readonly&state=bananas&redirect_uri=http://localhost:9393/oauth2callback&response_type=code&client_id=46518639499-e7ga9vf765rbid141mod8gp3bfd5ms2d.apps.googleusercontent.com'
+end
+
+get '/oauth2callback' do
+
+  user = User.find_by(email: "")
+
+
+  redirect "/mates"
+end
