@@ -1,5 +1,7 @@
 # project-mate
 
+Mate is a responsive web app that helps users remember their new and existing friends through guided note-taking
+
 How to run Mate?
 - Clone down the repo
 - From Terminal, go to root of local repo directory
