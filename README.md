@@ -9,6 +9,6 @@ How to run Mate?
 - Enjoy!
 
 Screenshots of Mate:
-![alt tag](https://github.com/suntorytime/project-mate/public/mate1.png)
-![alt tag](https://github.com/suntorytime/project-mate/public/mate2.png)
-![alt tag](https://github.com/suntorytime/project-mate/public/mate3.png)
+![alt tag](https://github.com/suntorytime/project-mate/blob/master/public/mate1.png)
+![alt tag](https://github.com/suntorytime/project-mate/blob/master/public/mate2.png)
+![alt tag](https://github.com/suntorytime/project-mate/blob/master/public/mate3.png)
